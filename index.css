@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100svw;
+  height: 100svh;
+}
+
+.ocpy {
+  width: 100%;
+  height: 100%;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.ovscrl {
+  overflow: scroll;
+}
+
+.flx {
+  display: flex;
+}
+.flx.cntr {
+  justify-content: center;
+  align-items: center;
+}
+.flx.col {
+  flex-direction: column;
+}
+
+.cmnstl {
+  padding: 10px;
+  border: 1px solid;
+}
+.cmnstl.nbrdr {
+  border: none;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 10px;
+  background-color: rgba(114, 50, 50, 0.7);
+}
+.navbar .navitem {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.navbar .navitem:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  transition: 0.2s;
+}
+
+.site {
+  display: grid;
+  grid-template-rows: 80px 1fr;
+}
+
+.about-c {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.about-c .about-image-c {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 80% 10% 10%;
+  background-color: rgba(81, 50, 114, 0.7);
+}
+.about-c .about-text-c {
+  padding: 10px;
+  display: grid;
+  text-align: center;
+  background-color: rgba(81, 50, 114, 0.7);
+}
+.about-c .about-text-c .about-text {
+  align-self: center;
+}
+.about-c .about-text-c .about-text h2, .about-c .about-text-c .about-text p {
+  padding: 10px;
+}
+
+.pub-c {
+  padding: 10px;
+  background-color: rgba(74, 8, 62, 0.7);
+}
+.pub-c h2, .pub-c ol {
+  padding: 10px;
+}
+
+.images-c {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+  background-color: rgba(12, 82, 125, 0.7);
+}
+.images-c .images-text-c {
+  display: grid;
+}
+.images-c .images-text-c h2 {
+  justify-self: center;
+  align-self: center;
+}
+.images-c .images-img-cc .images-img-c {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 10px;
+  align-items: center;
+}
+.images-c .images-img-cc .images-img-c img {
+  width: 250px;
+  height: 250px;
+}
+
+.hobblog-c {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: rgba(81, 39, 26, 0.7);
+}
+.hobblog-c .hobb-c, .hobblog-c .blog-c {
+  display: grid;
+  grid-template-rows: 50px 40px 40px 40px 1fr;
+  background-color: rgba(105, 120, 76, 0.7);
+}
+
+@media (max-width: 768px) {
+  .about-c {
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+  }
+  .site {
+    grid-template-rows: 160px 1fr;
+  }
+  .navbar {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+  }
+  .images-c .images-img-cc .images-img-c img {
+    width: 300px;
+    height: 300px;
+  }
+  .hobblog-c {
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
